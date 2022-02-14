@@ -1,0 +1,30 @@
+import random
+
+print('Welcome to Boss Clash')
+print('')
+print(''' 
+       (\_/)
+       (•x•)
+       (<🍦)
+''')
+
+boss = 'Ice Cream Rabbit'
+bossnum = random.randint(1,15)
+health = 5
+
+print('Boss:', boss)
+print(' ')
+print('Guess my lucky number between 1-15 to beat me!')
+
+
+while True:
+ playerinput = input('')
+ if playerinput == str(bossnum):
+  print('lucky hit, you win!')
+  break
+ elif playerinput != str(bossnum) and health > 1:
+  health -= 1
+  print('Ouch!', 'you have', health, ' health left')
+ else: 
+  print('You lost!')
+  break
